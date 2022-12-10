@@ -2,35 +2,34 @@
 
 \input{preamble.tex}
 
-\subtitle{Part 1: The Basics}
+\subtitle{Cześć 1: Podstawy}
 
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
+\begin{frame}{}
 \titlepage
 \end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Why \LaTeX{}?}
+\begin{frame}{Dlaczego \LaTeX{}?}
 \begin{itemize}
-\item It makes beautiful documents
+\item Tworzy piękne dokumenty
 \begin{itemize}
-\item Especially mathematics
+\item Szczególnie te, uwzględniające matematykę
 \end{itemize}
 %
-\item It was created by scientists, for scientists
+\item Został stworzony przez naukowców, dla naukowców
 \begin{itemize}
-\item A large and active community
+\item Istnieje duża i aktywna społeczność
 \end{itemize}
 %
-\item It is powerful --- you can extend it
+\item Jest potężnym narzędziem --- możesz je rozwijać
 \begin{itemize}
-\item Packages for papers, presentations, spreadsheets, \ldots
+\item Pakiety do artykułów, prezentacji, arkuszy kalkulacyjnych, \ldots
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -38,35 +37,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{How does it work?}
+\begin{frame}[fragile]{Jak działa?}
 \begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{commands} that
-describe its structure and meaning.
-\item The \texttt{latex} program processes your text and commands to produce a
-beautifully formatted document.
+\item Tworzysz swój dokument \texttt{samym tekstem} z użyciem \cmd{komend}, które
+opisują ich strukturę i znaczenie.
+\item Program \texttt{latex} przetwarza tekst oraz komendy, aby wyprodukować
+pięknie sformatowany dokument.
 \end{itemize}
 \vskip 2ex
 \begin{center}
 \begin{minted}[frame=single]{latex}
-The rain in Spain falls \emph{mainly} on the plain.
+Deszcz w Hiszpanii pada \emph{głównie} na równinie.
 \end{minted}
 \vskip 2ex
 \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
   rotate=270,xshift=-1em]{latex};
 \vskip 2ex
-\fbox{The rain in Spain falls \emph{mainly} on the plain.}
+\fbox{Deszcz w Hiszpanii pada \emph{głównie} na równinie.}
 \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{More examples of commands and their output\ldots}
+\begin{frame}[fragile]{Więcej przykładów komend i efektu ich działania\ldots}
 \begin{exampletwoup}
 \begin{itemize}
-\item Tea
-\item Milk
-\item Biscuits
+\item Herbata
+\item Mleko
+\item Ciasteczka
 \end{itemize}
 \end{exampletwoup}
 \vskip 2ex
@@ -88,77 +87,77 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Attitude adjustment}
+\begin{frame}[fragile]{Zmiana nastawienia}
 
 \begin{itemize}
-\item Use commands to describe `what it is', not `how it looks'.
-\item Focus on your content.
-\item Let \LaTeX{} do its job.
+\item Używaj komend, aby opisać `co to jest', a nie `jak to wygląda'.
+\item Skup się na zawartości.
+\item Pozwól \LaTeX{}'owi wykonać swoje zadanie.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Basics}
+\section{Podstawy}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Getting started}
+\subsection{Zacznijmy}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item A minimal \LaTeX{} document:
+\item Minimalny dokument \LaTeX{}:
 \inputminted[frame=single]{latex}{basics.tex}
-\item Commands start with a \emph{backslash} \keystrokebftt{\bs}.
-\item Every document starts with a \cmdbs{documentclass} command.
-\item The \emph{argument} in curly braces \keystrokebftt{\{} \keystrokebftt{\}} tells \LaTeX{} what kind of document we are creating: an \bftt{article}.
-\item A percent sign \keystrokebftt{\%} starts a \emph{comment} --- \LaTeX{}
-will ignore the rest of the line.
+\item Komendy zaczynają się od przycisku \emph{backslash} \keystrokebftt{\bs}.
+\item Każdy dokument zaczyna się komendą \cmdbs{documentclass}.
+\item \emph{Argument} w nawiasach klamrowych \keystrokebftt{\{} \keystrokebftt{\}} mówi \LaTeX{}'owi jaki rodzaj dokumentu tworzymy: \bftt{article}.
+\item Znak procentu \keystrokebftt{\%} rozpoczyna \emph{komentarz} --- \LaTeX{}
+zignoruje resztę linii przy kompilacji.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} with \wllogo}
+\begin{frame}[fragile]{\insertsubsection{} z \wllogo}
 \begin{itemize}
-\item Overleaf is a website for writing documents in \LaTeX.
-\item It `compiles' your \LaTeX{} automatically to show you the results.
+\item Overleaf jest platformą internetową do pisania dokumentów w \LaTeX'u.
+\item `Kompiluje' plik \LaTeX{} automatycznie, aby pokazać efekt końcowy.
 \vskip 2em
 \begin{center}
-\fbox{\href{\wlnewdoc{basics.tex}}{%
-Click here to open the example document in \wllogo{}}}
+\fbox{\href{\wlnewdoc{podstawy.tex}}{%
+Naciśnij tutaj, aby otworzyć przykładowy dokument w \wllogo{}}}
 \\[1ex]\scriptsize{}
-For best results, please use \href{http://www.google.com/chrome}{Google Chrome} or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
+Dla najlepszych resultatów, proszę użyj \href{http://www.google.com/chrome}{Google Chrome} lub aktualnej wersji \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
 \end{center}
 \vskip 2ex
-\item As we go through the following slides, try out the examples by typing them
-into the example document on Overleaf.
-\item \textbf{No really, you should try them out as we go!}
+\item Podczas przeglądania kolejnych slajdów wypróbuj przykłady, wpisując je
+do przykładowego dokumentu na Overleaf.
+\item \textbf{Naprawdę, powinieneś je wypróbować w trakcie!}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Text}
+\subsection{Skład tekstu}
 \begin{frame}[fragile]{\insertsubsection{}}
 \small
 \begin{itemize}
-\item Type your text between \cmdbegin{document} and \cmdend{document}.
-\item For the most part, you can just type your text normally.
+\item Napisz swój tekst pomiędzy \cmdbegin{document} oraz \cmdend{document}.
+\item W większości przypadków możesz po prostu normalnie wpisać tekst.
 \begin{exampletwouptiny}
-Words are separated by one or more
-spaces.
+Słowa są oddzielone jedną lub więcej
+spacjami.
 
-Paragraphs are separated by one
-or more blank lines.
+Akapity są oddzielone jedną lub więcej 
+pustymi liniami.
 \end{exampletwouptiny}
-\item Space in the source file is collapsed in the output.
+\item Spacje w pliku źródłowym są redukowane w pliku wynikowym.
 \begin{exampletwouptiny}
-The   rain       in Spain
-falls mainly on the plain.
+Deszcz    w    Hiszpanii     pada 
+głównie        na       równinie.
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -166,26 +165,26 @@ falls mainly on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Caveats}
+\begin{frame}[fragile]{\insertsubsection{}: Uwagi}
 \small
 \begin{itemize}
-\item Quotation marks are a bit tricky:\\
-use a backtick \keystroke{\`{}} on the left and an apostrophe \keystroke{\'{}} on the right.
+\item Cudzysłowy są nieco skomplikowane:\\
+użyj przycisku grawisa \keystroke{\`{}} po lewej stronie oraz przycisk apostrofu \keystroke{\'{}} po prawej.
 \begin{exampletwouptiny}
-Single quotes: `text'.
+Pojedynczy cudzysłów: `tekst'.
 
-Double quotes: ``text''.
+Podwójny cudzysłów: ``tekst''.
 \end{exampletwouptiny}
 
-\item Some common characters have special meanings in \LaTeX:\\[1ex]
+\item Niektóre popularne znaki mają specjalne znaczenie w \LaTeX u:\\[1ex]
 \begin{tabular}{cl}
-\keystrokebftt{\%} & percent sign              \\
-\keystrokebftt{\#} & hash (pound / sharp) sign \\
-\keystrokebftt{\&} & ampersand                 \\
-\keystrokebftt{\$} & dollar sign               \\
+\keystrokebftt{\%} & znak procentu              \\
+\keystrokebftt{\#} & znak krzyżyka (hash)       \\
+\keystrokebftt{\&} & znak et (oraz)             \\
+\keystrokebftt{\$} & znak dolara                \\
 \end{tabular}
-\item If you just type these, you'll get an error. If you want one to appear in
-the output, you have to \emph{escape} it by preceding it with a backslash.
+\item Jeśli po prostu je wpiszesz, pojawi się błąd. Jeśli chcesz, aby pojawiły się w
+końcowym dokumencie, musisz je poprzedzić ukośnikiem wstecznym (backslash).
 \begin{exampletwoup}
 \$\%\&\#!
 \end{exampletwoup}
@@ -195,22 +194,22 @@ the output, you have to \emph{escape} it by preceding it with a backslash.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Handling Errors}
+\begin{frame}[fragile]{Radzenie sobie z błędami - \textit{Errare humanum est}}
 \begin{itemize}
-\item \LaTeX{} can get confused when it is trying to compile your document. If
-it does, it stops with an error, which you must fix before it will produce
-any output.
-\item For example, if you misspell \cmdbs{emph} as \cmdbs{meph}, \LaTeX{} will
-stop with an ``undefined control sequence'' error, because ``meph'' is not
-one of the commands it knows.
+\item \LaTeX{} może się pogubić, gdy próbuje skompilować twój dokument. Jeśli to
+robi, zatrzymuje się z błędem, który musisz naprawić, zanim program mógł 
+wygenerować plik wynikowy.
+\item Na przykład, jeśli błędnie zapiszesz \cmdbs{emph} jako \cmdbs{meph}, \LaTeX{}
+zatrzyma się z błędem ``undefined control sequence'', ponieważ ``meph'' nie jest
+jedną z komend znanych programowi.
 \end{itemize}
-\begin{block}{Advice on Errors}
+\begin{block}{Porady dotyczące błędów}
 \begin{enumerate}
-\item Don't panic! Errors happen.
-\item Fix them as soon as they arise --- if what you just typed caused an error,
-you can start your debugging there.
-\item If there are multiple errors, start with the first one --- the cause may
-even be above it.
+\item Nie panikuj! Błędy się zdarzają.
+\item Napraw je, gdy tylko się pojawią --- jeśli to, co właśnie wpisałeś, spowodowało błąd,
+możesz tam rozpocząć debugowanie.
+\item Jeśli jest wiele błędów, zacznij od pierwszego --- przyczyna może
+być nawet wcześniej.
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -218,9 +217,9 @@ even be above it.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 1}
+\begin{frame}[fragile]{Skład tekstu Ćwiczenie 1}
 
-\begin{block}{Typeset this in \LaTeX:
+\begin{block}{Wpisz poniższy tekst w \LaTeX u:
 \footnote{\url{http://en.wikipedia.org/wiki/Economy_of_the_United_States}}}
 In March 2006, Congress raised that ceiling an additional \$0.79 trillion to
 \$8.97 trillion, which is approximately 68\% of GDP. As of October 4, 2008, the
@@ -229,41 +228,42 @@ to \$11.3 trillion.
 \end{block}
 \vskip 2ex
 \begin{center}
-\fbox{\href{\wlnewdoc{basics-exercise-1.tex}}{%
-Click to open this exercise in \wllogo{}}}
+\fbox{\href{\wlnewdoc{podstawy-cwiczenie-1.tex}}{%
+Kliknij, aby otworzyć to ćwiczenie w \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Hint: watch out for characters with special meanings!
-\item Once you've tried,
-\fbox{\href{\wlnewdoc{basics-exercise-1-solution.tex}}{%
-click here to see my solution}}.
+\item Wskazówka: uważaj na znaki o specjalnym znaczeniu!
+\item Kiedy już spróbujesz,
+\fbox{\href{\wlnewdoc{podstawy-cwiczenie-1-rozwiazanie.tex}}{%
+kliknij, aby zobaczyć rozwiązanie}}.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Mathematics}
-\begin{frame}[fragile]{\insertsubsection{}: Dollar Signs}
+\subsection{Skład tekstu matematycznego}
+\begin{frame}[fragile]{\insertsubsection{}: symbole dolara}
 \begin{itemize}
-\item Why are dollar signs \keystrokebftt{\$} special? We use them to mark mathematics in text.\\[1ex]
+\item Dlaczego znaki dolara \keystrokebftt{\$} specjalne? Używamy ich do zaznaczania
+matematycznych wyrażeń w tekście.\\[1ex]
 \begin{exampletwouptiny}
-% not so good:
-Let a and b be distinct positive
-integers, and let c = a - b + 1.
+% niezbyt dobrze:
+Niech a i b będą dwiema różnymi 
+liczbami naturalnymi, oraz niech c = a - b + 1.
 
 % much better:
-Let $a$ and $b$ be distinct positive
-integers, and let $c = a - b + 1$.
+Niech $a$ i $b$ będą dwiema różnymi 
+liczbami naturalnymi, oraz niech $c = a - b + 1$.
 \end{exampletwouptiny}
-\item Always use dollar signs in pairs --- one to begin the mathematics, and one
-to end it.
-\item \LaTeX{} handles spacing automatically; it ignores your spaces.
+\item Zawsze używaj znaków dolara w parach - jeden na początku wyrażenia, a drugi
+na końcu.
+\item \LaTeX{} automatycznie obsługuje odstępy; ignoruje twoje spacje.
 \begin{exampletwouptiny}
-Let $y=mx+b$ be \ldots
+Niech $y=mx+b$ będzie \ldots
 
-Let $y = m x + b$ be \ldots
+Niech $y = m x + b$ będzie \ldots
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -271,24 +271,24 @@ Let $y = m x + b$ be \ldots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Notation}
+\begin{frame}[fragile]{\insertsubsection{}: Notacja}
 \begin{itemize}
-\item Use caret \keystrokebftt{\^} for superscripts and underscore \keystrokebftt{\_} for subscripts.
+\item Użyj znaku dzióbka \keystrokebftt{\^} dla indeksów górnych, a podkreślenia \keystrokebftt{\_} dla indeksów dolnych.
 \begin{exampletwouptiny}
 $y = c_2 x^2 + c_1 x + c_0$
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item Use curly braces \keystrokebftt{\{} \keystrokebftt{\}} to group
-superscripts and subscripts.
+\item Użyj nawiasów klamrowych\keystrokebftt{\{} \keystrokebftt{\}}, aby zgrupować
+indeksy górne i dolne.
 \begin{exampletwouptiny}
-$F_n = F_n-1 + F_n-2$     % oops!
+$F_n = F_n-1 + F_n-2$     % ups!
 
 $F_n = F_{n-1} + F_{n-2}$ % ok!
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item There are commands for Greek letters and common notation.
+\item Istnieją polecenia dotyczące liter greckich i typowych oznaczeń.
 \begin{exampletwouptiny}
 $\mu = A e^{Q/RT}$
 
@@ -300,48 +300,45 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
+\begin{frame}[fragile]{\insertsubsection{}: Wyświetlanie równań}
 \begin{itemize}
-\item If it's big and scary, \emph{display} it on its own line using
-\cmdbegin{equation} and \cmdend{equation}.\\[2ex]
+\item Jeśli jest duży i przerażający, \emph{wyświetl} go w osobnej linii, używając
+\cmdbegin{równanie} i \cmdend{równanie}.\\[2ex]
 \begin{exampletwouptiny}
-The roots of a quadratic equation
-are given by
+Pierwiastki równania kwadratowego
+są podane przez
 \begin{equation}
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}
          {2a}
 \end{equation}
-where $a$, $b$ and $c$ are \ldots
+gdzie $a$, $b$ i $c$ są \ldots
 \end{exampletwouptiny}
 \vskip 1em
-{\scriptsize Caution: \LaTeX{} mostly ignores your spaces in mathematics, but it
-can't handle blank lines in equations --- don't put blank lines in your
-mathematics.}
+{\scriptsize Uwaga: \LaTeX{} przeważnie ignoruje spacje w wyrażeniach, ale nie 
+radzi sobie z pustymi wierszami w równaniach --- nie wstawiaj tam pustych wierszy.}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Environments}
+\begin{frame}[fragile]{Interludium: Środowiska}
 \begin{itemize}
-\item \bftt{equation} is an \emph{environment} --- a context.
-\item A command can produce different output in different contexts.
+\item \bftt{equation} jest \emph{środowiskiem} --- kontekstem.
+\item Komenda może generować różne wyniki w różnych kontekstach.
 \begin{exampletwouptiny}
-We can write
+Możemy napisać
 $ \Omega = \sum_{k=1}^{n} \omega_k $
-in text, or we can write
+w tekście, lub możemy napisać 
 \begin{equation}
   \Omega = \sum_{k=1}^{n} \omega_k
 \end{equation}
-to display it.
+aby go wyświetlić w oddzielnej linii.
 \end{exampletwouptiny}
 \vskip 2ex
-\item Note how the $\Sigma$ is bigger in the \bftt{equation} environment, and
-how the subscripts and superscripts change position, even though we used the
-same commands.
+\item Zwróć uwagę, że $\Sigma$ jest większa w środowisku \bftt{equation} i jak indeksy dolne i górne zmieniają położenie, mimo że użyliśmy tych samych poleceń.
 \vskip 1em
-{\scriptsize In fact, we could have written \bftt{\$...\$} as
+{\scriptsize Właściwie moglibyśmy napisać \bftt{\$...\$} jako
 \cmdbegin{math}\bftt{...}\cmdend{math}.}
 \end{itemize}
 \end{frame}
@@ -349,22 +346,22 @@ same commands.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Environments}
+\begin{frame}[fragile]{Interludium: Środowiska}
 \begin{itemize}
-\item The \cmdbs{begin} and \cmdbs{end} commands are used to create many
-different environments.
+\item Komendy \cmdbs{begin} i \cmdbs{end} są używane do tworzenia wielu różnych
+środowisk.
 \vskip 2ex
 
-\item The \bftt{itemize} and \bftt{enumerate} environments generate lists.
+\item Środowiska \bftt{itemize} i \bftt{enumerate} tworzą listy.
 \begin{exampletwouptiny}
 \begin{itemize} % for bullet points
-\item Biscuits
-\item Tea
+\item Ciasteczka
+\item Herbata
 \end{itemize}
 
 \begin{enumerate} % for numbers
-\item Biscuits
-\item Tea
+\item Ciasteczka
+\item Herbata
 \end{enumerate}
 \end{exampletwouptiny}
 \end{itemize}
@@ -373,24 +370,24 @@ different environments.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Packages}
+\begin{frame}[fragile]{Interludium: Pakiety}
 
 \begin{itemize}
-\item All of the commands and environments we've used so far are built into
-\LaTeX.
+\item Wszystkie polecenia i środowiska, z których korzystaliśmy do tej pory, są wbudowane
+w \LaTeX u.
 
-\item \emph{Packages} are libraries of extra commands and environments. There
-are thousands of freely available packages.
+\item \emph{Pakiety} to biblioteki dodatkowych komend i środowisk. 
+Istnieją tysiące darmowo dostępnych pakietów.
 
-\item We have to load each of the packages we want to use with a
-\cmdbs{usepackage} command in the \emph{preamble}.
+\item Musimy załadować każdy z pakietów, których chcemy użyć, za pomocą komendy
+\cmdbs{usepackage} w \emph{preambule}.
 
-\item Example: \bftt{amsmath} from the American Mathematical Society.
+\item Przykład: pakiet \bftt{amsmath} z Amerykańskiego Towarzystwa Matematycznego.
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
-\usepackage{amsmath} % preamble
+\usepackage{amsmath} % preambuła
 \begin{document}
-% now we can use commands from amsmath here...
+% teraz możemy używać poleceń z pakietu amsmath ...
 \end{document}
 \end{minted}
 \end{itemize}
@@ -399,26 +396,24 @@ are thousands of freely available packages.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{\insertsubsection{}: Przykłady z \bftt{amsmath}}
 \begin{itemize}
-\item Use \bftt{equation*} (``equation-star'') for unnumbered equations.
+\item Użyj \bftt{equation*} (``equation-star'') dla równań nienumerowanych.
 \begin{exampletwouptiny}
 \begin{equation*}
   \Omega = \sum_{k=1}^{n} \omega_k
 \end{equation*}
 \end{exampletwouptiny}
-\item \LaTeX{} treats adjacent letters as variables multiplied together, which
-is not always what you want. \bftt{amsmath} defines commands for many common
-mathematical operators.
+\item \LaTeX{} traktuje sąsiednie litery jako zmienne pomnożone przez siebie, co nie zawsze jest pożądane. \bftt{amsmath} definiuje komendy dla wielu powszechnych operatorów matematycznych.
 \begin{exampletwouptiny}
-\begin{equation*} % bad!
+\begin{equation*} % źle!
  min_{x,y} (1-x)^2 + 100(y-x^2)^2
 \end{equation*}
-\begin{equation*} % good!
+\begin{equation*} % dobrze!
 \min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
 \end{equation*}
 \end{exampletwouptiny}
-\item You can use \cmdbs{operatorname} for others.
+\item Możesz użyć \cmdbs{operatorname} dla innych.
 \begin{exampletwouptiny}
 \begin{equation*}
 \beta_i =
@@ -432,15 +427,15 @@ mathematical operators.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{\insertsubsection{}: Przykłady z \bftt{amsmath}}
 \begin{itemize}{\small
-\item Align a sequence of equations at the equals sign
+\item Dopasuj ciąg równań do znaku równości
 \begin{align*}
 (x+1)^3 &= (x+1)(x+1)(x+1) \\
         &= (x+1)(x^2 + 2x + 1) \\
         &= x^3 + 3x^2 + 3x + 1
 \end{align*}
-with the \bftt{align*} environment.
+ze środowiskiem \bftt{align*}.
 
 % for whatever reason, this doesn't play well with the twoup environment
 \begin{minted}[fontsize=\small,frame=single]{latex}
@@ -450,10 +445,9 @@ with the \bftt{align*} environment.
         &= x^3 + 3x^2 + 3x + 1
 \end{align*}
 \end{minted}
-\item An ampersand \keystrokebftt{\&} separates the left column (before the
-$=$) from the right column (after the $=$).
-\item A double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} starts a new
-line.
+\item Znak \keystrokebftt{\&} oddziela lewą kolumnę (przed znakiem
+$=$) od prawej kolumny (za znakiem $=$).
+\item Podwójny backslash \keystrokebftt{\bs}\keystrokebftt{\bs} rozpoczyna nową linię.
 }\end{itemize}
 \end{frame}
 
@@ -461,28 +455,28 @@ line.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 2}
+\begin{frame}[fragile]{Skład tekstu Ćwiczenie 2}
 
-\begin{block}{Typeset this in \LaTeX:}
-Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically
-distributed random variables with $\operatorname{E}[X_i] = \mu$ and
-$\operatorname{Var}[X_i] = \sigma^2 < \infty$, and let
+\begin{block}{Wpisz poniższy tekst w \LaTeX u:}
+Niech $X_1, X_2, \ldots, X_n$ będzie ciągiem niezależnych zmiennych losowych o
+jednakowych rozkładach z parametrami $\operatorname{E}[X_i] = \mu$ i
+$\operatorname{Var}[X_i] = \sigma^2 < \infty$, oraz niech
 \begin{equation*}
 S_n = \frac{1}{n}\sum_{i=1}^{n} X_i
 \end{equation*}
-denote their mean. Then as $n$ approaches infinity, the random variables
-$\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $N(0, \sigma^2)$.
+oznaczyć ich średnią. Następnie, gdy $n$ zbliża się do nieskończoności, wtedy
+zmienne losowe $\sqrt{n}(S_n - \mu)$ zbiegają do rozkładu normalnego $N(0, \sigma^2)$.
 \end{block}
 \vskip 2ex
 \begin{center}
-\fbox{\href{\wlnewdoc{basics-exercise-2.tex}}{%
-Click to open this exercise in \wllogo{}}}
+\fbox{\href{\wlnewdoc{podstawy-cwiczenie-2.tex}}{%
+Kliknij, aby otworzyć to ćwiczenie w \wllogo{}}}
 \end{center}
 \begin{itemize}
-\item Hint: the command for $\infty$ is \cmdbs{infty}.
-\item Once you've tried,
-\fbox{\href{\wlnewdoc{basics-exercise-2-solution.tex}}{%
-click here to see my solution}}.
+\item Wskazówka: komenda dla $\infty$ to \cmdbs{infty}.
+\item Kiedy już spróbujesz,
+\fbox{\href{\wlnewdoc{podstawy-cwiczenie-2-rozwiazanie.tex}}{%
+kliknij, aby zobaczyć rozwiązanie}}.
 \end{itemize}
 \end{frame}
 
